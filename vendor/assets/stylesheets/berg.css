@@ -583,7 +583,7 @@ header.hero.parallax-yes > .parallax > .bcg {
   display: table;
   width: 100%;
   height: 100%;
-  background-image: url('../images/bg-hero.jpg');
+  background-image: url(https://images.unsplash.com/photo-1431068799455-80bae0caf685?format=auto&amp;auto=compress&amp;dpr=2&amp;crop=entropy&amp;fit=crop&amp;w=1404&amp;h=936&amp;q=80);
   background-repeat: no-repeat;
   background-position: center bottom;
   -webkit-background-size: cover;
@@ -1563,7 +1563,7 @@ button.mfp-arrow:active {
 /*  6.4. SECTION - STRENGTHS
 /*---------------------------------------------------------------------*/
 #strengths {
-  background-image: url('../images/bg-strengths.jpg');
+  background-image: url('https://images.unsplash.com/photo-1416339442236-8ceb164046f8?format=auto&auto=compress&dpr=2&crop=entropy&fit=crop&w=1404&h=1015&q=80');
   background-position: center top;
 }
 
@@ -1576,7 +1576,7 @@ button.mfp-arrow:active {
 }
 
 #strengths.parallax-yes > .parallax > .bcg {
-  background-image: url('../images/bg-strengths.jpg');
+  background-image: url('https://images.unsplash.com/photo-1416339442236-8ceb164046f8?format=auto&auto=compress&dpr=2&crop=entropy&fit=crop&w=1404&h=1015&q=80');
 }
 
 .column-chart {
