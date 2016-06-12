@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require plugins/jpreloader/js/jpreloader
 //= require plugins/detectmobilebrowser/detectmobilebrowser
 //= require plugins/debouncer/debouncer
 //= require plugins/easing/jquery.easing

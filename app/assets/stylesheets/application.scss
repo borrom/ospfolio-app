@@ -12,7 +12,6 @@
  *
  *= require plugins/icons-mind/style
  *= require plugins/fontawesome/css/font-awesome
- *= require plugins/jpreloader/css/jpreloader
  *= require plugins/animate-css/animate
  *= require plugins/magnificPopup/magnific-popup
  *= require plugins/flexSlider/flexslider
@@ -23,6 +22,8 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+ @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
 
 /*-----------------------------------------------------------------------
 /*  Theme Name  : BERG
