@@ -13,5 +13,20 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require plugins/jpreloader/js/jpreloader
+//= require plugins/detectmobilebrowser/detectmobilebrowser
+//= require plugins/debouncer/debouncer
+//= require plugins/easing/jquery.easing
+//= require plugins/sticky/jquery.sticky
+//= require plugins/inview/jquery.inview
+//= require plugins/matchHeight/jquery.matchHeight-min
+//= require plugins/magnificPopup/jquery.magnific-popup.min
+//= require plugins/flexSlider/jquery.flexslider-min
+//= require plugins/countTo/jquery.countTo
+//= require plugins/skrollr/skrollr.min
+//= require main
+//= require parallax
+//= require animation
+
 //= require turbolinks
 //= require_tree .
