@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require turbolinks
 //= require bootstrap-sprockets
+//= require plugins/jpreloader/js/jpreloader.min
 //= require plugins/detectmobilebrowser/detectmobilebrowser
 //= require plugins/debouncer/debouncer
 //= require plugins/easing/jquery.easing
@@ -23,9 +25,13 @@
 //= require plugins/flexSlider/jquery.flexslider-min
 //= require plugins/countTo/jquery.countTo
 //= require plugins/skrollr/skrollr.min
+//= require plugins/validation/jquery.validate.min
+//= require plugins/isotope/isotope.pkgd.min
 //= require main
+//= require contact
+//= require maps.googleapis
+//= require map
 //= require parallax
+//= require filterable-portfolio
 //= require animation
-
-//= require turbolinks
 //= require_tree .

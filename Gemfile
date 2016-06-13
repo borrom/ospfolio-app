@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 ruby "2.2.3"
 
 gem 'rails', '4.2.6'
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -24,6 +27,3 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
-
-# New gems
-gem 'bootstrap-sass', '~> 3.3.6'
