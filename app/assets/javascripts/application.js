@@ -24,6 +24,7 @@
 //= require plugins/magnificPopup/jquery.magnific-popup.min
 //= require plugins/flexSlider/jquery.flexslider-min
 //= require plugins/countTo/jquery.countTo
+//= require plugins/morphext/morphext.min
 //= require plugins/skrollr/skrollr.min
 //= require plugins/validation/jquery.validate.min
 //= require plugins/isotope/isotope.pkgd.min
@@ -33,5 +34,6 @@
 //= require map
 //= require parallax
 //= require filterable-portfolio
+//= require text-rotator
 //= require animation
 //= require_tree .
