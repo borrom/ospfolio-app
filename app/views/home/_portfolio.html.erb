@@ -41,8 +41,8 @@
                 <!-- PORTFOLIO START -->
                 <div class="portfolio">
                     <div class="row filterable-portfolio">
-                    <% @allproject.each do |project| %>
-                    <div class="item <%= project.category %> col-sm-6 col-md-3">
+                    <% @projects.each do |project| %>
+                    <div class="item <%= project.projectcategory %> col-sm-6 col-md-3">
                             <div class="project-wrapper">
                                 <div class="project-link">
                                     <a href="assets/images/portfolio/project-image-1.jpg" class="zoom" title="Buzz Lightyear">
@@ -56,7 +56,7 @@
                                 <!-- //.project-link -->
 
                                 <div class="project-title">
-                                    <h4><%= project.title %></h4>
+                                    <h4><%= project.projecttitle %></h4>
                                 </div>
                                 <!-- //.project-title -->
 
