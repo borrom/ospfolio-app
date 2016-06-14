@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Picture</th>
       <th>Projecttitle</th>
       <th>Projectclient</th>
       <th>Projectlink</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @projects.each do |project| %>
       <tr>
+        <td><%= image_tag(project.picture.url, size: "100x100") if project.picture? %></td>
         <td><%= project.projecttitle %></td>
         <td><%= project.projectclient %></td>
         <td><%= project.projectlink %></td>

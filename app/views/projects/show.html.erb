@@ -2,6 +2,11 @@
 
 <p>
   <strong>Projecttitle:</strong>
+  <%= image_tag(@project.picture.url, size: "200x200", class: "gravatar") if @project.picture? %>
+</p>
+
+<p>
+  <strong>Projecttitle:</strong>
   <%= @project.projecttitle %>
 </p>
 

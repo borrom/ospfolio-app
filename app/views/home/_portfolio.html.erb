@@ -60,7 +60,7 @@
                                 </div>
                                 <!-- //.project-title -->
 
-                                <img src="https://d13yacurqjgara.cloudfront.net/users/288987/screenshots/2772603/cuba-sunrise_1x.jpg"/>
+                                <%= image_tag(project.picture.url, size: "768x590", class: "image-responsive") if project.picture? %>
                             </div>
                             <!-- //.project-wrapper -->
                         </div>
