@@ -78,6 +78,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Set Sendgrid
+  # app52213347@heroku.com
+  # mtdjawio2029
   config.action_mailer.default_url_options = { host: 'https://ospfolio.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
 
@@ -89,5 +91,5 @@ Rails.application.configure do
   :password       => ENV['SENDGRID_PASSWORD'],
   :domain         => 'heroku.com',
   :enable_starttls_auto => true
-}
+  }
 end
