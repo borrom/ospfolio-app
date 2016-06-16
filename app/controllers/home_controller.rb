@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   def index
   	@projects = Project.all
   	@contact = Contact.new
+  	
   end
 
   def create
@@ -12,7 +13,7 @@ class HomeController < ApplicationController
 			flash.now[:error] = nil
 		else
 			flash.now[:error] = 'Cannot send message.'
-			render :new
+			render :contact
 		end
 	end
   
