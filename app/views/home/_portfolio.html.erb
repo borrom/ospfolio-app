@@ -45,18 +45,18 @@
                     <div class="item <%= project.projectcategory %> col-sm-6 col-md-3">
                             <div class="project-wrapper">
                                 <div class="project-link">
-                                    <a href="assets/images/portfolio/project-image-1.jpg" class="zoom" title="Buzz Lightyear">
+                                    <a href="<%= project.picture %>" class="zoom" title="Buzz Lightyear">
                                         <i class="icon-Full-Screen"></i>
                                     </a>
 
-                                    <a href="https://www.behance.net/gallery/25963987/Buzz-Lightyear" target="_blank" class="external-link">
-                                        <i class="icon-Link"></i>
-                                    </a>
+                                    <%= link_to raw("<i class='icon-Link'></i>"), "http://#{project.projectlink}", :target => "_blank", class: "external-link" %>
+                                
                                 </div>
                                 <!-- //.project-link -->
 
                                 <div class="project-title">
                                     <h4><%= project.projecttitle %></h4>
+
                                 </div>
                                 <!-- //.project-title -->
 
@@ -70,7 +70,7 @@
                     <!-- //.row -->
                 </div>
                 <!-- PORTFOLIO END -->
-                <% if @projects.any? %>
+                <% if ! @projects.any? %>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="launch text-center">

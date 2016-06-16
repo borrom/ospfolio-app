@@ -16,11 +16,6 @@
                                     </p>
 
                                     <span class="divider"></span>
-
-                                    <p class="text-grey">
-                                        I currently work at Lens pro media Company, where I spend most of my time crafting and working on awesome projects.
-                                    </p>
-
                                 </div>
                                 <!-- //.col-md-12 -->
                             </div>
@@ -43,12 +38,13 @@
                                     </ul>
                                 </div>
                                 <!-- //.col-md-5 -->
-
+                                <% if ! @projects.any? %>
                                 <div class="col-sm-6 col-md-7">
                                     <a href="#" class="btn btn-lg btn-custom">
                                         <i class="icon-File-Download"></i> Download Resume
                                     </a>
                                 </div>
+                                <% end %>
                                 <!-- //.col-md-6 -->
                             </div>
                             <!-- //.row -->
@@ -61,7 +57,7 @@
                     <!-- PROFILE PICTURE START -->
                     <div class="col-md-5 hidden-xs hidden-sm match-height pp-wrapper">
                         <div class="profile-picture style-one">
-                            <img src="https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-9/13344693_1720960548175854_8831357770116404740_n.jpg?oh=a41a678883bb66ab67d360855382bda2&oe=57CEFE2E" alt="profile picture" class="img-responsive"/>
+                            <img src="https://s3.amazonaws.com/ospfolio/pro.jpg" alt="profile picture" class="img-responsive"/>
                         </div>
                     </div>
                     <!-- //PROFILE PICTURE END -->
@@ -72,4 +68,4 @@
         </div>
         <!-- //.container -->
     </section>
-    <!-- //PROFILE SECTION END -->
+    <!-- //PROFILE SECTION END

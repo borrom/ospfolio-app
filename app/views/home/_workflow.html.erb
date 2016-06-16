@@ -106,7 +106,7 @@
                     <!-- //.row -->
                 </div>
                 <!-- //WORK PROCESS END -->
-                
+                <% if ! @projects.any? %>
                 <div class="row">
                     <div class="col-md-12">
                         <p class="text-grey text-justify">
@@ -115,6 +115,8 @@
                     </div>
                     <!-- //.col-md-12 -->
                 </div>
+                <% end %>
+                
                 <!-- //.row -->
             </div>
             <!-- //.section-content -->

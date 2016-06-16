@@ -1240,12 +1240,11 @@ header.hero.owl-bg-carousel-yes .owl-theme .owl-controls .owl-page.active span {
 }
 
 #portfolio .section-wrapper > .section-content {
-  padding-bottom: 100px;
+  padding-bottom: 0;
 }
 
 .portfolio {
   margin-top: 30px;
-  margin-bottom: 50px;
 }
 
 .portfolio .item {
@@ -2752,7 +2751,7 @@ button.mfp-arrow:active {
   color: #171717;
   font-size: 16px;
   border: none;
-  border-bottom: 1px solid #3b3b3b;
+  border-bottom: 1px solid #c80a48;
   border-radius: 0px;
 }
 
@@ -2769,7 +2768,7 @@ button.mfp-arrow:active {
   color: #171717;
   font-size: 16px;
   border: none;
-  border-bottom: 1px solid #3b3b3b;
+  border-bottom: 1px solid #c80a48;
   border-radius: 0px;
 }
 
