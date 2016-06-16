@@ -1,0 +1,100 @@
+<!-- CONTACT SECTION START -->
+    <section id="contact" class="section">
+        <div class="container section-wrapper">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="section-title">Contact Me</h2>
+
+                        <p class="section-subtitle">
+                            Have a project you'd like to discuss?
+                        </p>
+
+                        <span class="divider center"></span>
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+                
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+
+                        <!-- CONTACT FORM START -->
+                        <%= form_for(@contact, :html => { :name => 'contact-form', :id => 'contact-form', :class => 'contact-form validate element-line', :role => 'form' }) do |f| %>
+							<div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-lg">
+                                            <%= f.text_field :name, id: "name", class: "form-control required", placeholder: "Name", autocomplete: "off", required: true %>
+                                        </div>
+                                        <!-- //.input-group -->
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-6 -->
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-lg">
+                                            <%= f.email_field :email, id: "email", class: "form-control required email", placeholder: "Email", autocomplete: "off", required: true %>
+                                        </div>
+                                        <!-- //.input-group -->
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-6 -->
+                            </div>
+                            <!-- //.row -->
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-lg">
+                                            <%= f.text_area :message, as: :text, id: "message", class: "form-control required", placeholder: "Message", required: true %>
+                                        </div>
+                                        <!-- //.input-group -->
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-12 -->
+                            </div>
+                            <!-- //.row -->
+
+                            <div class="hidden">
+                            	<div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-lg">
+                                            <%= f.text_field :nickname, hint: 'leave this field blank' %>
+                                        </div>
+                                        <!-- //.input-group -->
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-6 -->
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                    <%= button_tag(type: 'submit', id: 'submit') do %>
+ 										Say Hello
+ 									<% end %>
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-12 -->
+                            </div>
+                            <!-- //.row -->
+                        <% end %>
+                        <!-- //CONTACT FORM END -->
+
+                    </div>
+                    <!-- //.col-md-8 -->
+                </div>
+                <!-- //.row -->
+            </div>
+            <!-- //.section-content -->
+        </div>
+        <!-- //.container -->
+    </section>
+    <!-- //CONTACT SECTION END -->
