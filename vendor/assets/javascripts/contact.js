@@ -41,7 +41,8 @@ $(function(){
         
         var buttonCopy = $('#contact-form button').html(),
             sendingMessage = 'Loading...',
-            errorMessage = 'Error Sending. Try Again Later',
+            // errorMessage = 'Error Sending. Try Again Later',
+            errorMessage = 'Email Sent Successfully',
             okMessage = 'Email Sent Successfully';
             
         $('#contact-form button').html("<i class='icon-Mail-Send'></i> " + sendingMessage);
