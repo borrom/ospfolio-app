@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :projects
   get 'contacts' => 'home#index'
   post 'contacts' => 'home#create'
