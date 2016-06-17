@@ -1,3 +1,51 @@
+<!-- NAVIGATION START -->
+    <nav id="navigation" class="navbar navbar-fixed-top center-menu" role="navigation">
+        <div class="container navbar-container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".berg-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand visible-xs" href="#page-top">OSP</a>
+            </div>
+            <!-- //.navbar-header -->
+            
+            <div class="navbar-collapse collapse berg-collapse">
+                <ul class="nav navbar-nav">
+                    <% if user_signed_in? %> 
+                        <li class="page-scroll">
+                            <%= link_to('Home', root_path, :method => :get) %>
+                        </li>
+                        
+                        <li class="page-scroll">
+                            <%= link_to('All Projects', projects_path, :method => :get) %>
+                        </li>
+
+                        <li class="page-scroll">
+                            <%= link_to('Sign Out', destroy_user_session_path, :method => :delete) %>
+                    <% else %>
+                        <li class="page-scroll">
+                            <%= link_to('Home', root_path, :method => :get) %>
+                        </li>
+                        
+                        <li class="page-scroll">
+                            <%= link_to('Portfolio', projects_path, :method => :get) %>
+                        </li>
+                        
+                        <li class="page-scroll">
+                            <%= link_to('Contact', contacts_path, :method => :get) %>
+                        </li>
+                    <% end %> 
+                </ul>
+            </div>
+            <!-- //.navbar-collapse -->
+        </div>
+        <!-- //.navbar-container -->
+    </nav>
+    <!-- //NAVIGATION END -->
 <!-- CONTACT SECTION START -->
     <section id="contact" class="section">
         <div class="container section-wrapper">
