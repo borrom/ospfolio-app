@@ -24,6 +24,19 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <div class="input-group input-group-lg">
+                                            <%= f.text_field :username, id: "username", class: "form-control required", placeholder: "Username", autocomplete: "off", required: true %>
+                                        </div>
+                                        <!-- //.input-group -->
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-12 -->
+                            </div>
+                            <!-- //.row -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-lg">
                                             <%= f.email_field :email, id: "email", class: "form-control required", placeholder: "Email", autocomplete: "off", required: true %>
                                         </div>
                                         <!-- //.input-group -->

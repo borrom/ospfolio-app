@@ -18,7 +18,7 @@
                 <ul class="nav navbar-nav">
                     <% if user_signed_in? %> 
                         <li class="page-scroll">
-                            <%= link_to('Home', root_path, :method => :get) %>
+                        <%= link_to('Home', root_path, :method => :get) %>
                         </li>
                         
                         <li class="page-scroll">
@@ -29,15 +29,15 @@
                             <%= link_to('Sign Out', destroy_user_session_path, :method => :delete) %>
                     <% else %>
                         <li class="page-scroll">
-                            <%= link_to('Home', root_path, :method => :get) %>
+                            <a href="#home">Home</a>
                         </li>
                         
                         <li class="page-scroll">
-                            <%= link_to('Portfolio', projects_path, :method => :get) %>
+                            <a href="#portfolio">Portfolio</a>
                         </li>
                         
                         <li class="page-scroll">
-                            <%= link_to('Contact', contacts_path, :method => :get) %>
+                            <a href="#contact">Contact</a>
                         </li>
                     <% end %> 
                 </ul>

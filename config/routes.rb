@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :projects
-  get 'contacts' => 'home#index'
-  post 'contacts' => 'home#create'
+  get 'contacts' => 'contact#index'
+  post 'contacts' => 'contact#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,12 +1,9 @@
-class HomeController < ApplicationController
-  
-  def index
-  	@projects = Project.all.order("CREATED_AT DESC")
-  	@contact = Contact.new
-  	
-  end
+class ContactController < ApplicationController
+	def index
+  		@contact = Contact.new
+  	end
 
-  def create
+  	def create
 		@contact = Contact.new(params[:contact])
 		@contact.request = request
 		if @contact.deliver
@@ -15,6 +12,5 @@ class HomeController < ApplicationController
 			flash.now[:error] = 'Cannot send message.'
 			render :contact
 		end
-  end
+  	end
 end
-

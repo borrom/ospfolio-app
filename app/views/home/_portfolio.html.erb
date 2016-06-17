@@ -70,11 +70,11 @@
                     <!-- //.row -->
                 </div>
                 <!-- PORTFOLIO END -->
-                <% if !@projects.any? %>
+                <% if @projects.any? %>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="launch text-center">
-                            <a href="#" class="btn btn-lg btn-custom">Show All</a>
+                        <div class="launch text-center" style="margin: 50px 0;">
+                            <%= link_to "Show All", projects_path, class: "btn btn-lg btn-custom" %>
                         </div>
                         <!-- //.launch -->
                     </div>

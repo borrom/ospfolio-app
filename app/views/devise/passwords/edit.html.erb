@@ -1,25 +1,81 @@
-<h2>Change your password</h2>
+<!-- CONTACT SECTION START -->
+    <section id="contact" class="section">
+        <div class="container section-wrapper">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="section-title">Change your password</h2>
+                        <p class="section-subtitle">
+                            You made a right choice
+                        </p>
+                        <%= render "devise/shared/links" %>
+                        <span class="divider center"></span>
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+                
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
-  <%= f.hidden_field :reset_password_token %>
+                        <!-- CONTACT FORM START -->
+                        <%= form_for(resource, as: resource_name, url: password_path(resource_name), :html => { :method =>'put', :name => 'contact-form', :id => 'contact-form', :class => 'contact-form validate element-line', :role => 'form' }) do |f| %>
+                        <%= devise_error_messages! %>
+                        <%= f.hidden_field :reset_password_token %>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-lg">
+                                            <% if @minimum_password_length %>
+                                              <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+                                            <% end %>
+                                            <%= f.password_field :password, id: "password", class: "form-control required", placeholder: "New password", autocomplete: "off", required: true %>
+                                        </div>
+                                        <!-- //.input-group -->
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-12 -->
+                            </div>
+                            <!-- //.row -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-lg">
+                                            <% if @minimum_password_length %>
+                                              <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+                                            <% end %>
+                                            <%= f.password_field :password_confirmation, id: "password_confirmation", class: "form-control required", placeholder: "Confirm new password", autocomplete: "off", required: true %>
+                                        </div>
+                                        <!-- //.input-group -->
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-12 -->
+                            </div>
+                            <!-- //.row -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                    <%= button_tag(type: 'submit', id: 'submit') do %>
+                                        Change my password
+                                    <% end %>
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-12 -->
+                            </div>
+                            <!-- //.row -->
+                        <% end %>
+                        <!-- //CONTACT FORM END -->
 
-  <div class="field">
-    <%= f.label :password, "New password" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
-    <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Change my password" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+                    </div>
+                    <!-- //.col-md-8 -->
+                </div>
+                <!-- //.row -->
+            </div>
+            <!-- //.section-content -->
+        </div>
+        <!-- //.container -->
+    </section>
+    <!-- //CONTACT SECTION END -->
