@@ -1,6 +1,40 @@
-<h1>Editing Project</h1>
+<!-- CONTACT SECTION START -->
+    <section id="contact" class="section">
+        <div class="container section-wrapper">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="section-title">Editing Project</h2>
 
-<%= render 'form' %>
+                        <p class="section-subtitle">
+                            Anything, you want to change? Do it here :D
+                        </p>
+						<%= link_to 'Show', @project %> |
+						<%= link_to 'Back', projects_path %>
+                        <span class="divider center"></span>
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+                
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+                        <!-- CONTACT FORM START -->
+                        <%= render 'form' %>
+                        <!-- //CONTACT FORM END -->
+
+                    </div>
+                    <!-- //.col-md-8 -->
+                </div>
+                <!-- //.row -->
+                
+            </div>
+            <!-- //.section-content -->
+        </div>
+        <!-- //.container -->
+    </section>
+    <!-- //CONTACT SECTION END -->
+
+
+

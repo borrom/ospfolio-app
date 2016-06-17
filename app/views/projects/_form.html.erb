@@ -1,45 +1,103 @@
-<%= form_for(@project, html: { multipart: true }) do |f| %>
-  <% if @project.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
 
-      <ul>
-      <% @project.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :picture %><br>
-    <%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png' %>
-  </div>
 
-  <div class="field">
-    <%= f.label :projecttitle %><br>
-    <%= f.text_field :projecttitle %>
-  </div>
-  <div class="field">
-    <%= f.label :projectclient %><br>
-    <%= f.text_field :projectclient %>
-  </div>
-  <div class="field">
-    <%= f.label :projectlink %><br>
-    <%= f.text_field :projectlink %>
-  </div>
-  <div class="field">
-    <%= f.label :projectcategory %><br>
-    <%= f.text_field :projectcategory %>
-  </div>
-  <div class="field">
-    <%= f.label :projecthour %><br>
-    <%= f.number_field :projecthour %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+                        <!-- CONTACT FORM START -->
+                        <%= form_for(@project, :html => { :multipart => 'true', :name => 'contact-form', :id => 'contact-form', :class => 'contact-form validate element-line', :role => 'form' }) do |f| %>
+                          <% if @project.errors.any? %>
+                          <div id="error_explanation">
+                            <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+                            <ul>
+                            <% @project.errors.full_messages.each do |message| %>
+                              <li><%= message %></li>
+                            <% end %>
+                            </ul>
+                          </div>
+                          <% end %>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-lg">
+                                            <%= f.text_field :projecttitle, id: "projecttitle", class: "form-control required", placeholder: "Title", autocomplete: "off", required: true %>
+                                        </div>
+                                        <!-- //.input-group -->
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-6 -->
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-lg">
+                                            <%= f.text_field :projectcategory, id: "projectcategory", class: "form-control required email", placeholder: "Category", autocomplete: "off", required: true %>
+                                        </div>
+                                        <!-- //.input-group -->
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-3 -->
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-lg">
+                                            <%= f.text_field :projecthour, id: "projecthour", class: "form-control required", placeholder: "Hours?", required: true %>
+                                        </div>
+                                        <!-- //.input-group -->
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-3 -->
+                            </div>
+                            <!-- //.row -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-lg">
+                                            <%= f.text_field :projectclient, id: "projectclient", class: "form-control required", placeholder: "Client", autocomplete: "off", required: true %>
+                                        </div>
+                                        <!-- //.input-group -->
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-6 -->
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-lg">
+                                            <%= f.text_field :projectlink, id: "projectlink", class: "form-control required email", placeholder: "External Link", autocomplete: "off", required: true %>
+                                        </div>
+                                        <!-- //.input-group -->
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-6 -->
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-lg">
+                                            <%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png', id: "picture", class: "form-control required", placeholder: "Upload Picture", required: true  %>
+                                        </div>
+                                        <!-- //.input-group -->
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-12 -->
+                            </div>
+                            <!-- //.row -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                    <%= button_tag(type: 'submit', id: 'submit') do %>
+                                        Create
+                                    <% end %>
+                                    </div>
+                                    <!-- //.form-group -->
+                                </div>
+                                <!-- //.col-md-12 -->
+                            </div>
+                            <!-- //.row -->
+                        <% end %>
+                        <!-- //CONTACT FORM END -->
 
 <script type="text/javascript">
   $('#project_picture').bind('change', function() {

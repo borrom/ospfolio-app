@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require plugins/jpreloader/js/jpreloader.min
 //= require plugins/detectmobilebrowser/detectmobilebrowser
 //= require plugins/debouncer/debouncer
 //= require plugins/easing/jquery.easing

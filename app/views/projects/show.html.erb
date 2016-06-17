@@ -1,34 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Projecttitle:</strong>
-  <%= image_tag(@project.picture.url, size: "200x200", class: "gravatar") if @project.picture? %>
-</p>
-
-<p>
-  <strong>Projecttitle:</strong>
-  <%= @project.projecttitle %>
-</p>
-
-<p>
-  <strong>Projectclient:</strong>
-  <%= @project.projectclient %>
-</p>
-
-<p>
-  <strong>Projectlink:</strong>
-  <%= @project.projectlink %>
-</p>
-
-<p>
-  <strong>Projectcategory:</strong>
-  <%= @project.projectcategory %>
-</p>
-
-<p>
-  <strong>Projecthour:</strong>
-  <%= @project.projecthour %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<%= notice %>
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <%= image_tag(@project.picture.url, size: "200x200", class: "gravatar") if @project.picture? %>
+      <div class="caption">
+        <h3><%= @project.projecttitle %></h3>
+        <p><%= @project.projectclient %></p>
+        <p><%= @project.projectlink %></p>
+        <p><%= @project.projectcategory %></p>
+        <p><%= @project.projecthour %></p>
+        <p>
+          <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-primary", role: "button" %>
+          <%= link_to 'Back', projects_path, class: "btn btn-default", role: "button" %> 
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

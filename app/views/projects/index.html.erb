@@ -1,37 +1,84 @@
-<p id="notice"><%= notice %></p>
+<!-- PORTFOLIO SECTION START -->
+    <section id="portfolio" class="section">
+        <div class="container-fluid section-wrapper">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="section-title">All Projects</h2>
 
-<h1>Listing Projects</h1>
+                        <p class="section-subtitle">this is where you can see all of my projects.</p>
+                        <%= link_to 'New Project', new_project_path %>
+                        <span class="divider center"></span>
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="filterable-portfolio-nav list-inline text-center">
+                            <li class="active">
+                                <a href="#" data-filter="*" class="btn btn-sm btn-custom disabled">All</a>
+                            </li>
 
-<table>
-  <thead>
-    <tr>
-      <th>Picture</th>
-      <th>Projecttitle</th>
-      <th>Projectclient</th>
-      <th>Projectlink</th>
-      <th>Projectcategory</th>
-      <th>Projecthour</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+                            <li>
+                                <a href="#" data-filter=".design" class="btn btn-sm btn-custom">Design</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#" data-filter=".web" class="btn btn-sm btn-custom">Web App</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#" data-filter=".mobile" class="btn btn-sm btn-custom">Mobile App</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+                
+                <!-- PORTFOLIO START -->
+                <div class="portfolio">
+                    <div class="row filterable-portfolio">
+                    <% @projects.each do |project| %>
+                    <div class="item <%= project.projectcategory %> col-sm-6 col-md-3">
+                            <div class="project-wrapper">
+                                <div class="project-link">
+                                
+                                </div>
+                                <!-- //.project-link -->
+                                <!-- //.project-title -->
 
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= image_tag(project.picture.url, size: "100x100") if project.picture? %></td>
-        <td><%= project.projecttitle %></td>
-        <td><%= project.projectclient %></td>
-        <td><%= project.projectlink %></td>
-        <td><%= project.projectcategory %></td>
-        <td><%= project.projecthour %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Project', new_project_path %>
+                                <%= image_tag(project.picture.url, size: "768x590", class: "img-responsive") if project.picture? %>
+                            </div>
+                            <div class="project-title" style="text-align: center">
+                                    <h4 style="display: inline-block; margin-right: 10px;"><%= link_to 'Edit', edit_project_path(project) %></h4>
+                                    <h4 style="display: inline-block;"><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></h4>
+                            </div>
+                            <!-- //.project-wrapper -->
+                        </div>
+                        <!-- //.item -->
+                    <% end %>
+                    </div>
+                    <!-- //.row -->
+                </div>
+                <!-- PORTFOLIO END -->
+                <% if @projects.any? %>
+                <div class="row" style="padding: 80px 0">
+                    <div class="col-md-12">
+                        <div class="launch text-center">
+                            <a href="#" class="btn btn-lg btn-custom">Show All</a>
+                        </div>
+                        <!-- //.launch -->
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <% end %>
+                <!-- //.row -->
+            </div>
+            <!-- //.section-content -->
+        </div>
+        <!-- //.container-fluid -->
+    </section>
+    <!-- //PORTFOLIO SECTION END -->
