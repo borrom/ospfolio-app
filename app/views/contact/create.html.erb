@@ -15,7 +15,7 @@
             
             <div class="navbar-collapse collapse berg-collapse">
                 <ul class="nav navbar-nav">
-                    <% if user_signed_in? %> 
+                    <% if user_signed_in? && current_user.admin? %>
                         <li class="page-scroll">
                             <%= link_to('Home', root_path, :method => :get) %>
                         </li>

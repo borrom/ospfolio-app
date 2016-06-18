@@ -8,7 +8,7 @@
                         <h2 class="section-title">All Projects</h2>
 
                         <p class="section-subtitle">this is where you can see all of my projects.</p>
-                        <% if user_signed_in? %> 
+                        <% if user_signed_in? && current_user.admin? %>
                         <%= link_to 'New Project', new_project_path %>
                         <% end %>
                         <span class="divider center"></span>
@@ -48,7 +48,7 @@
                     <div class="item <%= project.projectcategory %> col-sm-6 col-md-3">
                             <div class="project-wrapper">
                                 <div class="project-link">
-                                    <% if !user_signed_in? %> 
+                                    <% if user_signed_in? && current_user.admin? %>
                                         <a href="<%= project.picture %>" class="zoom" title="Buzz Lightyear">
                                         <i class="icon-Full-Screen"></i>
                                     </a>
@@ -56,7 +56,7 @@
                                     <% end %>
                                 </div>
                                 <!-- //.project-link -->
-                                <% if !user_signed_in? %> 
+                                <% if user_signed_in? && current_user.admin? %>
                                 <div class="project-title">
                                     <h4><%= project.projecttitle %></h4>
 
@@ -67,7 +67,7 @@
                                 <%= image_tag(project.picture.url, size: "768x590", class: "img-responsive") if project.picture? %>
                             </div>
                             <div class="project-title" style="text-align: center">
-                                <% if user_signed_in? %> 
+                                <% if user_signed_in? && current_user.admin? %>
                                     <h4 style="display: inline-block; margin-right: 10px;"><%= link_to 'Edit', edit_project_path(project) %></h4>
                                     <h4 style="display: inline-block;"><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></h4>
                                 <% end %>
