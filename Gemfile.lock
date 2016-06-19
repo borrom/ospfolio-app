@@ -206,6 +206,7 @@ GEM
       activesupport (>= 4.1.0)
     i18n (0.7.0)
     inflecto (0.0.2)
+    ionicons-rails (2.0.0)
     ipaddress (0.8.3)
     jbuilder (2.5.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -325,6 +326,7 @@ DEPENDENCIES
   devise (~> 4.1, >= 4.1.1)
   fog (~> 1.38)
   font-awesome-rails
+  ionicons-rails
   jbuilder (~> 2.0)
   jquery-rails
   mail_form (~> 1.5, >= 1.5.1)
