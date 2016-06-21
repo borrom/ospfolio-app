@@ -1,3 +1,4 @@
+<%= provide(:title, "Projects") %>
 <!-- PORTFOLIO SECTION START -->
     <section id="portfolio" class="section">
         <div class="container-fluid section-wrapper">
@@ -79,7 +80,7 @@
                     <!-- //.row -->
                 </div>
                 <!-- PORTFOLIO END -->
-                <% if @projects.any? %>
+                <% if !@projects.any? %>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="launch text-center" style="margin-top: 80px;">

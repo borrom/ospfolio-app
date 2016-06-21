@@ -388,7 +388,7 @@ header.hero {
   z-index: 5;
   width: 100%;
   height: 100%;
-  background-image: url('https://images.unsplash.com/photo-1437419764061-2473afe69fc2?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1949&h=1096&q=80');
+  background-image: url('https://drscdn.500px.org/photo/147529519/q%3D80_m%3D2000/b95485bac6bffd9d7e925afa59d0a37a');
   background-repeat: no-repeat;
   background-position: center bottom;
   -webkit-background-size: cover;
@@ -583,7 +583,7 @@ header.hero.parallax-yes > .parallax > .bcg {
   display: table;
   width: 100%;
   height: 100%;
-  background-image: url('https://images.unsplash.com/photo-1437419764061-2473afe69fc2?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1949&h=1096&q=80');
+  background-image: url('https://drscdn.500px.org/photo/147529519/q%3D80_m%3D2000/b95485bac6bffd9d7e925afa59d0a37a');
   background-repeat: no-repeat;
   background-position: center bottom;
   -webkit-background-size: cover;
