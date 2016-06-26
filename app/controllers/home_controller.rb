@@ -3,7 +3,6 @@ class HomeController < ApplicationController
   def index
   	@projects = Project.all.order("CREATED_AT DESC")
   	@contact = Contact.new
-  	
   end
 
   def create
