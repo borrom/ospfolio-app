@@ -5,7 +5,6 @@ class ContactController < ApplicationController
 
   	def create
 		@contact = Contact.new(params[:contact])
-		flash.now[:success] = "Email was sent successfully."
 		@contact.request = request
 		if @contact.deliver
 			flash.now[:success] = "Email was sent successfully."
