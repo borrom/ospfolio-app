@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all.order("CREATED_AT DESC")
+    @projects = Project.all.order("CREATED_AT DESC").paginate(:page => params[:page], :per_page => 9)
   end
 
   # GET /projects/1
@@ -29,6 +29,7 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
+        flash.now[:success] = "Project was created."
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else

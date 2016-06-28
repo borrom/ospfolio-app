@@ -80,17 +80,15 @@
                     <!-- //.row -->
                 </div>
                 <!-- PORTFOLIO END -->
-                <% if !@projects.any? %>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="launch text-center" style="margin-top: 80px;">
-                            <a href="#" class="btn btn-lg btn-custom">Show All</a>
+                            <%= will_paginate @projects %>
                         </div>
                         <!-- //.launch -->
                     </div>
                     <!-- //.col-md-12 -->
                 </div>
-                <% end %>
                 <!-- //.row -->
             </div>
             <!-- //.section-content -->

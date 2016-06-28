@@ -6,6 +6,8 @@ gem 'rails', '4.2.6'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'ionicons-rails'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
