@@ -14,14 +14,15 @@
 <% else %>
 	<%= render '/layouts/nav' %>
 <% end %>
-
+<% if !flash.empty? %>
 <% flash.each do %>
-<div class="alert alert-warning alert-dismissible text-center" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Oh Ohhhh!</strong> 
-  <%= notice %>
-  <%= alert %>
-</div>
+  <div class="alert alert-warning alert-dismissible text-center" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Oh Ohhhh!</strong> 
+    <%= notice %>
+    <%= alert %>
+  </div>
+  <% end %>
 <% end %>
 
 <%= yield %>
